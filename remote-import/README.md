@@ -54,9 +54,9 @@ ModuleNotFoundError: No module named 'myremotemodule'
 Артемий Елькин's module is imported
 ```
 
-![1.png](/screenshots/1.png)
+![1.png](screenshots/1.png)
 
-![2.png](/screenshots/2.png)
+![2.png](screenshots/2.png)
 
 Пока URL нет в `sys.path`, интерпретатор ничего о модуле не знает. После добавления пути
 вызывается `url_hook`, который возвращает `URLFinder`, а модуль загружается через `URLLoader`.
@@ -72,9 +72,9 @@ ModuleNotFoundError: No module named 'myremotemodule'
 Артемий Елькин's module is imported
 ```
 
-![3.png](/screenshots/3.png)
+![3.png](screenshots/3.png)
 
-![4.png](/screenshots/4.png)
+![4.png](screenshots/4.png)
 
 ## 3. Переход на `requests`
 
@@ -95,12 +95,12 @@ ModuleNotFoundError: No module named 'myremotemodule'
 
 Для всех запросов задан `timeout=5`.
 
-![5.png](/screenshots/5.png)
+![5.png](screenshots/5.png)
 
 Python кэширует неудачу хука в `sys.path_importer_cache`, поэтому после включения сервера
 кэш нужно сбросить:
 
-![6.png](/screenshots/6.png)
+![6.png](screenshots/6.png)
 
 ## 5. Загрузка пакетов (***)
 
@@ -117,4 +117,4 @@ spec.submodule_search_locations.append(".../mypackage")
   Подмодули ищутся по этому URL через тот же `url_hook`, поэтому работают вложенные пакеты
   и относительные импорты (`from . import mysubmodule`).
 
-![7.png](/screenshots/7.png)
+![7.png](screenshots/7.png)
